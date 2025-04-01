@@ -13,7 +13,8 @@ previously provided AWS credentials.
 [AWS IAM roles for service accounts (IRSA)][5] is a recommended AWS approach for applications such
 as Kubernetes to authenticate with AWS services without using static credentials.
 
-This repository is focused on using Confluent S3 Sink current features to use IRSA the connectors.
+This repository demonstrates how to configure the Confluent S3 Sink Connector to authenticate using 
+IRSA.
 
 ## Implementation
 
@@ -34,7 +35,7 @@ It enables configuring IRSA credentials directly via connector properties.
 Add the following settings to the Confluent S3 Sink connector:
 - `irsa.role.arn`: Role ARN to use when starting a session.
 - `irsa.session.name`: Role session name to use when starting a session.
-- `irsa.token.file:` Path to the web identity token file.
+- `irsa.token.file`: Path to the web identity token file.
 
 
 For example:
