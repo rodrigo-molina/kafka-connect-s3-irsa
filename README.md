@@ -43,7 +43,7 @@ For example:
   "name": "my-s3-sink",
   "config": {
     "connector.class": "io.confluent.connect.s3.S3SinkConnector",
-    "s3.credentials.provider.class": "io.confluent.connect.s3.auth.WebIdentityTokenCredentialsProvider",
+    "s3.credentials.provider.class": "io.confluent.connect.s3.auth.AwsWebIdentityTokenCredentialsProvider",
     "s3.credentials.provider.irsa.role.arn": "arn:aws:iam::123456689123:role/my-role",
     "s3.credentials.provider.irsa.session.name": "my--sink-connector-session",
     "s3.credentials.provider.irsa.token.file": "/var/run/secrets/kubernetes.io/serviceaccount/token",
